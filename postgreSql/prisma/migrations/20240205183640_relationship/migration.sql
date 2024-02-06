@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE "Todos" ALTER COLUMN "done" SET DEFAULT false;
+
+-- AddForeignKey
+ALTER TABLE "Todos" ADD CONSTRAINT "Todos_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
